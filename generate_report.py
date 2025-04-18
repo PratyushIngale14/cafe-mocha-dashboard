@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
 from jinja2 import Environment, FileSystemLoader
-from weasyprint import HTML
 from datetime import datetime
+import matplotlib.pyplot as plt
+
 
 # Data input
 df = pd.read_csv("Cafe_Mocha_Cleaned.csv")
