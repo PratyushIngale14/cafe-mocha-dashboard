@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ business_name }} Financial Report</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+        
+        h1,
+        h2 {
+            color: #3d3d3d;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{ business_name }} - Monthly Financial Report</h1>
+    <p><strong>Sector:</strong> {{ business_sector }} | <strong>Generated on:</strong> {{ generated_on }}</p>
+
+    <div class="section">
+        <h2>Summary</h2>
+        <p>{{ executive_summary }}</p>
+    </div>
+
+    <div class="section">
+        <h2>Model Metrics</h2>
+        <ul>
+            <li><strong>MAE:</strong> ${{ mae }}</li>
+            <li><strong>RMSE:</strong> ${{ rmse }}</li>
+            <li><strong>R²:</strong> {{ r2 }}</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Monthly Financials</h2>
+        {{ month_table }}
+    </div>
+
+    <div class="section">
+        <h2>Seasonal Summary</h2>
+        {{ season_table }}
+    </div>
+
+    <div class="section">
+        <h2>Forecast Chart</h2>
+        <img src="{{ forecast_plot }}" width="600px">
+    </div>
+</body>
+
+</html>
