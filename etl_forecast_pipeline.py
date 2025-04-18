@@ -112,3 +112,20 @@ if uploaded_file is not None:
     """)
 
     st.download_button("📥 Download Transformed Data", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv")
+
+
+    from generate_report import create_pdf_report
+
+# Create report
+report_path = create_pdf_report(df, business_name=business_name, business_sector=business_sector)
+
+# Display download button
+with open(report_path, "rb") as f:
+    pdf_data = f.read()
+
+st.download_button(
+    label="📄 Download Financial Report (PDF)",
+    data=pdf_data,
+    file_name="Cafe_Mocha_Report.pdf",
+    mime="application/pdf"
+)
