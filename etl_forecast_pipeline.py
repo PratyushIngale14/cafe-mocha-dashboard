@@ -13,8 +13,6 @@ from xgboost import XGBRegressor
 import base64
 from generate_report import create_html_report
 
-
-
 st.set_page_config(page_title="Automated Business Forecast & Report", layout="wide")
 
 # ---------------------- Upload & Business Metadata ---------------------- #
@@ -22,14 +20,6 @@ st.title("📊 Automated Business Financial Forecast & ETL Pipeline")
 st.markdown("Upload your monthly financial data and let us forecast and analyze your performance.")
 
 uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
-# User inputs for report
-business_name = st.text_input("🏢 Business Name", "Cafe Mocha")
-business_sector = st.selectbox("📊 Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
-
-
-business_name = st.text_input("Business Name", "Cafe Mocha")
-business_sector = st.selectbox("Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
-business_start_year = st.slider("Year Business Started", 2000, 2025, 2019)
 
 # ---------------------- ETL + Feature Engineering ---------------------- #
 @st.cache_data
@@ -50,9 +40,7 @@ def load_and_transform(file):
         st.stop()
 
     df['Total_Expenses'] = df[required_cols].sum(axis=1)
-
     return df
-
 
 # ---------------------- Forecasting Functions ---------------------- #
 def sarima_forecast(series, steps=12):
@@ -81,6 +69,7 @@ def evaluate_model(df):
 
 # ---------------------- Visualization + Report ---------------------- #
 if uploaded_file is not None:
+    # Input fields inside upload block
     business_name = st.text_input("🏢 Business Name", "Cafe Mocha")
     business_sector = st.selectbox("📊 Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
 
@@ -123,21 +112,16 @@ if uploaded_file is not None:
 
     st.download_button("📥 Download Transformed Data", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv")
 
+    # ---------------------- HTML Report Download ---------------------- #
+    html_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
+    with open(html_path, "r", encoding="utf-8") as f:
+        html_data = f.read()
 
+    st.download_button(
+        label="📄 Download Financial Report (HTML)",
+        data=html_data,
+        file_name="Cafe_Mocha_Report.html",
+        mime="text/html"
+    )
 
-
-
-# Generate HTML report
-html_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
-
-with open(html_path, "r", encoding="utf-8") as f:
-    html_data = f.read()
-
-st.download_button(
-    label="📄 Download Financial Report (HTML)",
-    data=html_data,
-    file_name="Cafe_Mocha_Report.html",
-    mime="text/html"
-)
-
-st.info("💡 Open the report in a browser and use **Print → Save as PDF** to export.")
+    st.info("💡 Open the report in a browser and use **Print → Save as PDF** to export.")
