@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from jinja2 import Environment, FileSystemLoader
-import pdfkit
+from weasyprint import HTML
 import matplotlib.pyplot as plt
 from datetime import datetime
 
@@ -61,7 +61,7 @@ html_out = template.render(
 with open("financial_report.html", "w") as f:
     f.write(html_out)
 
-pdfkit.from_file("financial_report.html", "Cafe_Mocha_Report.pdf")
+HTML("financial_report.html").write_pdf("Cafe_Mocha_Report.pdf")
 print("✅ PDF report generated: Cafe_Mocha_Report.pdf")
 
 def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Beverage"):

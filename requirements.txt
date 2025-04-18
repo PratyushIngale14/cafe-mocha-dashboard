@@ -8,3 +8,4 @@ statsmodels
 jinja2
 pdfkit
 matplotlib
+weasyprint
