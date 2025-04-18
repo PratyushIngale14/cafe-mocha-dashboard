@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
-import matplotlib.pyplot as plt
 from datetime import datetime
 
 # Data input
@@ -74,7 +73,7 @@ def create_html_report(df, business_name="Cafe Mocha", business_sector="Food & B
     df['Season'] = df['Season'].map({1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'})
     df['Total_Expenses'] = df[['Marketing_Spend', 'Food_Costs', 'Labor_Costs', 'Rent', 'Utilities']].sum(axis=1)
 
-    # Save a profit trend plot
+    # Plot
     plt.figure(figsize=(8, 4))
     df.groupby('Month_Year')['Profit'].sum().plot()
     plt.title('Monthly Profit Trend')
@@ -113,4 +112,5 @@ def create_html_report(df, business_name="Cafe Mocha", business_sector="Food & B
         f.write(html_out)
 
     return "financial_report.html"
+
 

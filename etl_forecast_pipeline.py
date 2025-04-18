@@ -11,7 +11,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from xgboost import XGBRegressor
 import base64
-from generate_report import create_pdf_report
+from generate_report import create_html_report
+
 
 
 st.set_page_config(page_title="Automated Business Forecast & Report", layout="wide")
@@ -118,13 +119,11 @@ if uploaded_file is not None:
 
 
 
-from generate_report import create_html_report
 
-# Generate the HTML report
-html_report_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
+# Generate HTML report
+html_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
 
-# Read and offer it as download
-with open(html_report_path, "r", encoding="utf-8") as f:
+with open(html_path, "r", encoding="utf-8") as f:
     html_data = f.read()
 
 st.download_button(
@@ -135,4 +134,3 @@ st.download_button(
 )
 
 st.info("💡 Open the report in a browser and use **Print → Save as PDF** to export.")
-
