@@ -54,7 +54,7 @@ elif page == "Sentiment Insights":
     aspects = ['food', 'service', 'ambience', 'pricing', 'staff', 'menu', 'cleanliness', 'waiting time', 'music', 'lighting']
 
     for word in dish_keywords + aspects:
-        df[word] = df['Clean_Review'].str.contains(fr'\\b{word}\\b', case=False)
+        df[word] = df['Clean_Review'].str.contains(fr'\\b{word}\\b', case=False, na=False)
 
     def wordcloud_plot(sentiment='LABEL_2'):
         text = ' '.join(df[df['Predicted_Label'] == sentiment]['Clean_Review'])
@@ -68,7 +68,7 @@ elif page == "Sentiment Insights":
                 count = df[(df[asp]) & (df['Predicted_Label'] == label)].shape[0]
                 results.append({'Aspect': asp, 'Sentiment': label, 'Count': count})
         df_bubble = pd.DataFrame(results)
-        return px.scatter(df_bubble, x='Aspect', y='Sentiment', size='Count', color='Sentiment', size_max=60, title="Sentiment Distribution by Business Aspect")
+        return px.scatter(df_bubble[df_bubble['Count'] > 0], x='Aspect', y='Sentiment', size='Count', color='Sentiment', size_max=60, title="Sentiment Distribution by Business Aspect")
 
     def dish_sentiment_bar():
         results = []
@@ -76,7 +76,8 @@ elif page == "Sentiment Insights":
             for label in df['Predicted_Label'].unique():
                 count = df[(df[dish]) & (df['Predicted_Label'] == label)].shape[0]
                 results.append({'Dish': dish, 'Sentiment': label, 'Count': count})
-        return px.bar(pd.DataFrame(results), x='Dish', y='Count', color='Sentiment', barmode='group', title='Sentiment Breakdown by Dish')
+        df_bar = pd.DataFrame(results)
+        return px.bar(df_bar[df_bar['Count'] > 0], x='Dish', y='Count', color='Sentiment', barmode='group', title='Sentiment Breakdown by Dish')
 
     def heatmap():
         matrix = []
@@ -118,7 +119,7 @@ elif page == "Sentiment Insights":
             results.append({'Dish': dish, 'Total Mentions': total, 'Positive Mentions': pos})
         df_gap = pd.DataFrame(results)
         df_gap['Gap'] = df_gap['Total Mentions'] - df_gap['Positive Mentions']
-        return px.bar(df_gap, x='Dish', y='Gap', title='🚨 Gap: Mentions vs Positives', color='Gap')
+        return px.bar(df_gap[df_gap['Gap'] > 0], x='Dish', y='Gap', title='🚨 Gap: Mentions vs Positives', color='Gap')
 
     st.subheader("Sentiment Word Clouds")
     col1, col2 = st.columns(2)
