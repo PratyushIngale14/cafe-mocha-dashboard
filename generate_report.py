@@ -116,3 +116,9 @@ def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Be
     pdfkit.from_file("financial_report.html", "Cafe_Mocha_Report.pdf")
     return "Cafe_Mocha_Report.pdf"
 
+def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Beverage"):
+    from jinja2 import Environment, FileSystemLoader
+    import pdfkit
+    ...
+    return "Cafe_Mocha_Report.pdf"
+
