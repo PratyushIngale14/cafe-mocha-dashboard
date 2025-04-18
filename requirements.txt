@@ -7,4 +7,5 @@ xgboost
 statsmodels
 jinja2
 matplotlib
+wordcloud
 
