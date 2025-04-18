@@ -3,14 +3,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 import plotly.graph_objects as go
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from pandas.tseries.offsets import DateOffset
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from xgboost import XGBRegressor
-import base64
 from generate_report import create_html_report
 
 st.set_page_config(page_title="Automated Business Forecast & Report", layout="wide")
@@ -32,7 +30,6 @@ def load_and_transform(file):
     df['Season'] = df['Date'].dt.month % 12 // 3 + 1
     df['Season'] = df['Season'].map({1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'})
 
-    # Validate required columns
     required_cols = ['Marketing_Spend', 'Food_Costs', 'Labor_Costs', 'Rent', 'Utilities']
     missing = [col for col in required_cols if col not in df.columns]
     if missing:
@@ -43,12 +40,12 @@ def load_and_transform(file):
     return df
 
 # ---------------------- Forecasting Functions ---------------------- #
-def sarima_forecast(series, steps=12):
+def forecast_sarima(series, steps=36):
     model = SARIMAX(series, order=(1,1,1), seasonal_order=(1,1,1,12),
                     enforce_stationarity=False, enforce_invertibility=False)
     results = model.fit(disp=False)
     forecast = results.get_forecast(steps=steps)
-    return forecast.predicted_mean, forecast.conf_int()
+    return forecast.predicted_mean
 
 # ---------------------- Model Evaluation ---------------------- #
 def evaluate_model(df):
@@ -69,25 +66,41 @@ def evaluate_model(df):
 
 # ---------------------- Visualization + Report ---------------------- #
 if uploaded_file is not None:
-    # Input fields inside upload block
     business_name = st.text_input("🏢 Business Name", "Cafe Mocha")
     business_sector = st.selectbox("📊 Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
 
     df = load_and_transform(uploaded_file)
     st.success(f"Uploaded and processed data for **{business_name}** ({business_sector})")
 
-    st.header("📈 Monthly Profit Forecast")
+    st.header("📈 Revenue vs Expense Forecast (36 Months)")
     df_monthly = df.resample('MS', on='Date').sum()
-    profit_series = df_monthly['Profit']
-    forecast_mean, forecast_ci = sarima_forecast(profit_series, steps=12)
-    future_dates = pd.date_range(start=profit_series.index[-1] + DateOffset(months=1), periods=12, freq='MS')
+    revenue_series = df_monthly['Revenue']
+    expense_series = df_monthly['Total_Expenses']
+
+    revenue_forecast = forecast_sarima(revenue_series)
+    expense_forecast = forecast_sarima(expense_series)
+    future_dates = pd.date_range(start=revenue_series.index[-1] + DateOffset(months=1), periods=36, freq='MS')
 
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=profit_series.index, y=profit_series.values, name='Historical Profit'))
-    fig.add_trace(go.Scatter(x=future_dates, y=forecast_mean.values, name='Forecasted Profit', line=dict(dash='dash')))
-    fig.add_trace(go.Scatter(x=future_dates, y=forecast_ci.iloc[:, 0], line=dict(width=0), showlegend=False))
-    fig.add_trace(go.Scatter(x=future_dates, y=forecast_ci.iloc[:, 1], fill='tonexty', fillcolor='rgba(0,200,0,0.2)', line=dict(width=0), name='Confidence Interval'))
-    fig.update_layout(title='Profit Forecast - Next 12 Months', xaxis_title='Date', yaxis_title='Profit ($)', template='plotly_white')
+    fig.add_trace(go.Scatter(x=revenue_series.index, y=revenue_series.values,
+                             mode='lines+markers', name='Revenue', line=dict(color='deepskyblue', width=2)))
+    fig.add_trace(go.Scatter(x=expense_series.index, y=expense_series.values,
+                             mode='lines+markers', name='Expenses', line=dict(color='dodgerblue', width=2)))
+    fig.add_trace(go.Scatter(x=future_dates, y=revenue_forecast.values,
+                             mode='lines+markers', name='Forecasted Revenue', line=dict(color='deepskyblue', width=2, dash='dash')))
+    fig.add_trace(go.Scatter(x=future_dates, y=expense_forecast.values,
+                             mode='lines+markers', name='Forecasted Expenses', line=dict(color='dodgerblue', width=2, dash='dash')))
+
+    fig.update_layout(
+        title="📊 Monthly Revenue vs Expenses (Historical + 36-Month Forecast)",
+        xaxis_title="Date",
+        yaxis_title="Amount ($)",
+        template="plotly_white",
+        hovermode='x unified',
+        legend=dict(x=0.01, y=0.99, bgcolor='rgba(0,0,0,0)'),
+        font=dict(size=14),
+        margin=dict(l=40, r=40, t=60, b=40)
+    )
     st.plotly_chart(fig, use_container_width=True)
 
     st.header("📊 Monthly & Seasonal Summary")
@@ -110,11 +123,8 @@ if uploaded_file is not None:
     Forecasting model is suitable for directional insights and near-future planning.
     """)
 
-    st.download_button("📥 Download Transformed Data", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv")
-    st.download_button("📥 Download Transformed Data", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv")
+    st.download_button("📥 Download Cleaned Dataset", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv", key="cleaned_csv")
 
-
-    # ---------------------- HTML Report Download ---------------------- #
     html_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
     with open(html_path, "r", encoding="utf-8") as f:
         html_data = f.read()
@@ -123,7 +133,8 @@ if uploaded_file is not None:
         label="📄 Download Financial Report (HTML)",
         data=html_data,
         file_name="Cafe_Mocha_Report.html",
-        mime="text/html"
+        mime="text/html",
+        key="html_report"
     )
 
     st.info("💡 Open the report in a browser and use **Print → Save as PDF** to export.")
