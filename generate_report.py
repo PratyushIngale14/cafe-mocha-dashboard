@@ -57,12 +57,6 @@ html_out = template.render(
     forecast_plot="forecast_plot.png"
 )
 
-# Save as PDF
-with open("financial_report.html", "w") as f:
-    f.write(html_out)
-
-HTML("financial_report.html").write_pdf("Cafe_Mocha_Report.pdf")
-print("✅ PDF report generated: Cafe_Mocha_Report.pdf")
 
 def create_html_report(df, business_name="Cafe Mocha", business_sector="Food & Beverage"):
     from jinja2 import Environment, FileSystemLoader
