@@ -64,9 +64,8 @@ with open("financial_report.html", "w") as f:
 HTML("financial_report.html").write_pdf("Cafe_Mocha_Report.pdf")
 print("✅ PDF report generated: Cafe_Mocha_Report.pdf")
 
-def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Beverage"):
+def create_html_report(df, business_name="Cafe Mocha", business_sector="Food & Beverage"):
     from jinja2 import Environment, FileSystemLoader
-    import pdfkit
     from datetime import datetime
     import matplotlib.pyplot as plt
 
@@ -75,7 +74,7 @@ def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Be
     df['Season'] = df['Season'].map({1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'})
     df['Total_Expenses'] = df[['Marketing_Spend', 'Food_Costs', 'Labor_Costs', 'Rent', 'Utilities']].sum(axis=1)
 
-    # Forecast plot
+    # Save a profit trend plot
     plt.figure(figsize=(8, 4))
     df.groupby('Month_Year')['Profit'].sum().plot()
     plt.title('Monthly Profit Trend')
@@ -113,12 +112,5 @@ def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Be
     with open("financial_report.html", "w") as f:
         f.write(html_out)
 
-    pdfkit.from_file("financial_report.html", "Cafe_Mocha_Report.pdf")
-    return "Cafe_Mocha_Report.pdf"
-
-def create_pdf_report(df, business_name="Cafe Mocha", business_sector="Food & Beverage"):
-    from jinja2 import Environment, FileSystemLoader
-    import pdfkit
-    ...
-    return "Cafe_Mocha_Report.pdf"
+    return "financial_report.html"
 

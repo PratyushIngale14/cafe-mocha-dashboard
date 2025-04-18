@@ -118,16 +118,21 @@ if uploaded_file is not None:
 
 
 
-# Create report
-report_path = create_pdf_report(df, business_name=business_name, business_sector=business_sector)
+from generate_report import create_html_report
 
-# Display download button
-with open(report_path, "rb") as f:
-    pdf_data = f.read()
+# Generate the HTML report
+html_report_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
+
+# Read and offer it as download
+with open(html_report_path, "r", encoding="utf-8") as f:
+    html_data = f.read()
 
 st.download_button(
-    label="📄 Download Financial Report (PDF)",
-    data=pdf_data,
-    file_name="Cafe_Mocha_Report.pdf",
-    mime="application/pdf"
+    label="📄 Download Financial Report (HTML)",
+    data=html_data,
+    file_name="Cafe_Mocha_Report.html",
+    mime="text/html"
 )
+
+st.info("💡 Open the report in a browser and use **Print → Save as PDF** to export.")
+
