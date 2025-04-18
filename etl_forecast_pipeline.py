@@ -111,6 +111,8 @@ if uploaded_file is not None:
     """)
 
     st.download_button("📥 Download Transformed Data", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv")
+    st.download_button("📥 Download Transformed Data", data=df.to_csv(index=False).encode('utf-8'), file_name=f"{business_name}_Cleaned.csv")
+
 
     # ---------------------- HTML Report Download ---------------------- #
     html_path = create_html_report(df, business_name=business_name, business_sector=business_sector)
