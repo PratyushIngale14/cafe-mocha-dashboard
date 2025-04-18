@@ -22,6 +22,10 @@ st.title("📊 Automated Business Financial Forecast & ETL Pipeline")
 st.markdown("Upload your monthly financial data and let us forecast and analyze your performance.")
 
 uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
+# User inputs for report
+business_name = st.text_input("🏢 Business Name", "Cafe Mocha")
+business_sector = st.selectbox("📊 Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
+
 
 business_name = st.text_input("Business Name", "Cafe Mocha")
 business_sector = st.selectbox("Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
