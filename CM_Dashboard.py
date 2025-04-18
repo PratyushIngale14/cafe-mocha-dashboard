@@ -169,3 +169,125 @@ elif page == "Forecast & Prediction":
     - Monitor customer trends to enhance engagement in slow seasons.
     - Plan staffing and inventory based on seasonality and forecasts.
     """)
+
+# CM_dashboard.py (Updated)
+
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from wordcloud import WordCloud
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from pandas.tseries.offsets import DateOffset
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from xgboost import XGBRegressor
+from generate_report import create_html_report
+
+st.set_page_config(page_title="Cafe Mocha Dashboard", layout="wide")
+
+# Sidebar Navigation
+page = st.sidebar.radio("Navigate", ["Home", "Financial Insights", "Forecasting", "Sentiment Insights"])
+
+@st.cache_data
+def load_reviews():
+    df = pd.read_csv("CafeMocha_Sentiment_Annotated.csv")
+    df['Date'] = pd.to_datetime(df['Date'])
+    df['Clean_Review'] = df['Clean_Review'].astype(str)
+    return df
+
+# Common keywords
+dish_keywords = ['pasta', 'burger', 'coffee', 'pizza', 'mocha', 'sandwich', 'wrap', 'brownie', 'smoothie']
+aspects = ['food', 'service', 'ambience', 'pricing', 'staff', 'menu', 'cleanliness', 'waiting time', 'music', 'lighting']
+
+if page == "Sentiment Insights":
+    st.title("💬 Customer Sentiment Dashboard: Cafe Mocha")
+    df = load_reviews()
+
+    for word in dish_keywords + aspects:
+        df[word] = df['Clean_Review'].str.contains(fr'\b{word}\b', case=False)
+
+    # WordCloud
+    def wordcloud_plot(sentiment='LABEL_2'):
+        text = ' '.join(df[df['Predicted_Label'] == sentiment]['Clean_Review'])
+        wc = WordCloud(width=800, height=400, background_color='white').generate(text)
+        return wc
+
+    # Bubble Chart
+    def bubble_chart():
+        results = []
+        for asp in aspects:
+            for label in df['Predicted_Label'].unique():
+                count = df[(df[asp]) & (df['Predicted_Label'] == label)].shape[0]
+                results.append({'Aspect': asp, 'Sentiment': label, 'Count': count})
+        df_bubble = pd.DataFrame(results)
+        return px.scatter(df_bubble, x='Aspect', y='Sentiment', size='Count', color='Sentiment', size_max=60,
+                          title="Sentiment Distribution by Business Aspect")
+
+    def dish_sentiment_bar():
+        results = []
+        for dish in dish_keywords:
+            for label in df['Predicted_Label'].unique():
+                count = df[(df[dish]) & (df['Predicted_Label'] == label)].shape[0]
+                results.append({'Dish': dish, 'Sentiment': label, 'Count': count})
+        return px.bar(pd.DataFrame(results), x='Dish', y='Count', color='Sentiment', barmode='group',
+                      title='Sentiment Breakdown by Dish')
+
+    def heatmap():
+        matrix = []
+        for dish in dish_keywords:
+            row = [df[(df[dish]) & (df['Predicted_Label'] == label)].shape[0] for label in ['LABEL_0', 'LABEL_1', 'LABEL_2']]
+            matrix.append(row)
+        heatmap_df = pd.DataFrame(matrix, index=dish_keywords, columns=['Negative', 'Neutral', 'Positive'])
+        return px.imshow(heatmap_df, text_auto=True, title='Dish vs Sentiment Heatmap')
+
+    df['Month'] = df['Date'].dt.to_period('M').astype(str)
+    monthly = df.groupby(['Month', 'Predicted_Label']).size().reset_index(name='Count')
+    fig_monthly = px.line(monthly, x='Month', y='Count', color='Predicted_Label', title='📆 Monthly Sentiment Trend')
+
+    def radar_chart():
+        radar_data = []
+        for asp in aspects:
+            score = df[df[asp]].groupby('Predicted_Label').size().to_dict()
+            radar_data.append({
+                'Aspect': asp,
+                'Positive': score.get('LABEL_2', 0),
+                'Negative': score.get('LABEL_0', 0)
+            })
+        radar_df = pd.DataFrame(radar_data)
+        fig = go.Figure()
+        fig.add_trace(go.Scatterpolar(r=radar_df['Positive'], theta=radar_df['Aspect'], fill='toself', name='Positive'))
+        fig.add_trace(go.Scatterpolar(r=radar_df['Negative'], theta=radar_df['Aspect'], fill='toself', name='Negative'))
+        fig.update_layout(polar=dict(radialaxis=dict(visible=True)), title='Radar Chart: Avg Sentiment per Aspect')
+        return fig
+
+    def donut():
+        rating_count = df['Rating'].value_counts().sort_index()
+        return px.pie(names=rating_count.index, values=rating_count.values, hole=0.5, title='⭐ Rating Distribution')
+
+    def gap_chart():
+        results = []
+        for dish in dish_keywords:
+            total = df[dish].sum()
+            pos = df[(df[dish]) & (df['Predicted_Label'] == 'LABEL_2')].shape[0]
+            results.append({'Dish': dish, 'Total Mentions': total, 'Positive Mentions': pos})
+        df_gap = pd.DataFrame(results)
+        df_gap['Gap'] = df_gap['Total Mentions'] - df_gap['Positive Mentions']
+        return px.bar(df_gap, x='Dish', y='Gap', title='🚨 Gap: Mentions vs Positives', color='Gap')
+
+    st.subheader("Sentiment Word Clouds")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image(wordcloud_plot('LABEL_2').to_array(), caption='Positive Reviews')
+    with col2:
+        st.image(wordcloud_plot('LABEL_0').to_array(), caption='Negative Reviews')
+
+    st.plotly_chart(bubble_chart(), use_container_width=True)
+    st.plotly_chart(dish_sentiment_bar(), use_container_width=True)
+    st.plotly_chart(heatmap(), use_container_width=True)
+    st.plotly_chart(fig_monthly, use_container_width=True)
+    st.plotly_chart(radar_chart(), use_container_width=True)
+    st.plotly_chart(donut(), use_container_width=True)
+    st.plotly_chart(gap_chart(), use_container_width=True)
+
+    st.info("These insights help identify strong and weak points across food, service, ambience, and dishes based on real feedback.")
