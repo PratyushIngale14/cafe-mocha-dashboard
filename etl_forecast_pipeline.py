@@ -81,6 +81,9 @@ def evaluate_model(df):
 
 # ---------------------- Visualization + Report ---------------------- #
 if uploaded_file is not None:
+    business_name = st.text_input("🏢 Business Name", "Cafe Mocha")
+    business_sector = st.selectbox("📊 Business Sector", ["Food & Beverage", "Retail", "Technology", "Healthcare", "Other"])
+
     df = load_and_transform(uploaded_file)
     st.success(f"Uploaded and processed data for **{business_name}** ({business_sector})")
 
