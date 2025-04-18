@@ -34,8 +34,18 @@ def load_and_transform(file):
     df['Month_Year'] = df['Date'].dt.to_period('M').astype(str)
     df['Season'] = df['Date'].dt.month % 12 // 3 + 1
     df['Season'] = df['Season'].map({1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'})
-    df['Total_Expenses'] = df[['Marketing_Spend', 'Food_Costs', 'Labor_Costs', 'Rent', 'Utilities']].sum(axis=1)
+
+    # Validate required columns
+    required_cols = ['Marketing_Spend', 'Food_Costs', 'Labor_Costs', 'Rent', 'Utilities']
+    missing = [col for col in required_cols if col not in df.columns]
+    if missing:
+        st.error(f"🚨 Your file is missing required columns: {missing}")
+        st.stop()
+
+    df['Total_Expenses'] = df[required_cols].sum(axis=1)
+
     return df
+
 
 # ---------------------- Forecasting Functions ---------------------- #
 def sarima_forecast(series, steps=12):
