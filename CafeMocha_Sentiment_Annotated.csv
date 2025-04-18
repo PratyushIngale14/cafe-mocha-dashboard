@@ -1,0 +1,301 @@
+Date,Review,Rating,Sentiment_Label,Clean_Review,Predicted_Label,Confidence
+2020-04-25,dirty music and bad food and poor lighting,1,negative,dirty music and bad food and poor lighting,LABEL_0,0.9524729251861572
+2019-08-27,friendly music and loved the service and loved the food,5,positive,friendly music and loved the service and loved the food,LABEL_2,0.9736667275428772
+2022-03-30,affordable menu,3,positive,affordable menu,LABEL_1,0.5845792889595032
+2019-02-05,noisy waiting time and hated the menu,2,negative,noisy waiting time and hated the menu,LABEL_0,0.9630200862884521
+2021-09-21,rude cleanliness,1,negative,rude cleanliness,LABEL_0,0.5237459540367126
+2019-02-17,loved the lighting and relaxing cleanliness,5,positive,loved the lighting and relaxing cleanliness,LABEL_2,0.9772318601608276
+2023-02-05,The ambience and lighting were okay.,3,neutral,the ambience and lighting were okay,LABEL_2,0.9076153635978699
+2024-08-17,delicious food and loved the ambience,5,positive,delicious food and loved the ambience,LABEL_2,0.9843103885650635
+2024-05-26,The music and cleanliness were okay.,3,neutral,the music and cleanliness were okay,LABEL_2,0.9165180325508118
+2022-03-17,perfect cleanliness and loved the music and perfect ambience,3,positive,perfect cleanliness and loved the music and perfect ambience,LABEL_2,0.9784115552902222
+2022-11-08,The menu and pricing were okay.,3,neutral,the menu and pricing were okay,LABEL_2,0.896386981010437
+2021-05-09,affordable waiting time and quick music,4,positive,affordable waiting time and quick music,LABEL_1,0.512652575969696
+2023-05-02,relaxing lighting and friendly ambience,3,positive,relaxing lighting and friendly ambience,LABEL_2,0.907825767993927
+2020-12-22,affordable staff and affordable food and delicious service,5,positive,affordable staff and affordable food and delicious service,LABEL_2,0.9415796995162964
+2021-10-16,poor lighting and dirty service and poor pricing,1,negative,poor lighting and dirty service and poor pricing,LABEL_0,0.9433572292327881
+2023-09-15,bad ambience and slow menu,3,negative,bad ambience and slow menu,LABEL_0,0.9031547904014587
+2024-11-08,The lighting and cleanliness and menu were okay.,3,neutral,the lighting and cleanliness and menu were okay,LABEL_2,0.916167140007019
+2021-07-04,outstanding staff and quick food and perfect ambience,5,positive,outstanding staff and quick food and perfect ambience,LABEL_2,0.9582469463348389
+2023-04-16,perfect music and quick food and affordable pricing,4,positive,perfect music and quick food and affordable pricing,LABEL_2,0.9506164193153381
+2023-02-08,great ambience and friendly cleanliness and delicious lighting,5,positive,great ambience and friendly cleanliness and delicious lighting,LABEL_2,0.9769185185432434
+2023-12-22,great service and affordable staff,3,positive,great service and affordable staff,LABEL_2,0.9390345811843872
+2023-05-05,affordable food and loved the music,4,positive,affordable food and loved the music,LABEL_2,0.9658567905426025
+2021-11-09,outstanding service and great ambience and delicious menu,5,positive,outstanding service and great ambience and delicious menu,LABEL_2,0.9657853841781616
+2021-02-18,relaxing cleanliness and friendly service and quick music,3,positive,relaxing cleanliness and friendly service and quick music,LABEL_2,0.9546780586242676
+2019-01-21,dirty ambience and dirty pricing,2,negative,dirty ambience and dirty pricing,LABEL_0,0.8170666098594666
+2023-12-09,outstanding menu and quick music and perfect lighting,5,positive,outstanding menu and quick music and perfect lighting,LABEL_2,0.9352399110794067
+2019-05-01,perfect food and relaxing cleanliness,3,positive,perfect food and relaxing cleanliness,LABEL_2,0.9379819631576538
+2020-11-03,friendly ambience and perfect food and outstanding staff,3,positive,friendly ambience and perfect food and outstanding staff,LABEL_2,0.9702642560005188
+2021-04-29,friendly service and perfect cleanliness,4,positive,friendly service and perfect cleanliness,LABEL_2,0.9336919784545898
+2023-04-25,slow service and overpriced music,2,negative,slow service and overpriced music,LABEL_0,0.9390004873275757
+2022-04-15,poor pricing and noisy cleanliness and bad food,1,negative,poor pricing and noisy cleanliness and bad food,LABEL_0,0.9135947823524475
+2021-07-01,slow ambience,3,negative,slow ambience,LABEL_1,0.7376489043235779
+2023-03-14,outstanding staff and affordable music,4,positive,outstanding staff and affordable music,LABEL_2,0.8824372291564941
+2020-12-16,amazing music and outstanding cleanliness,4,positive,amazing music and outstanding cleanliness,LABEL_2,0.9590154886245728
+2020-05-05,affordable menu and outstanding pricing,3,positive,affordable menu and outstanding pricing,LABEL_2,0.8605016469955444
+2024-06-23,terrible cleanliness and terrible service and hated the lighting,2,negative,terrible cleanliness and terrible service and hated the lighting,LABEL_0,0.9747866988182068
+2024-11-02,perfect menu and amazing pricing and affordable lighting,3,positive,perfect menu and amazing pricing and affordable lighting,LABEL_2,0.9571158289909363
+2022-12-15,poor menu and slow staff,2,negative,poor menu and slow staff,LABEL_0,0.8845305442810059
+2023-11-18,great menu and affordable food and friendly ambience,3,positive,great menu and affordable food and friendly ambience,LABEL_2,0.9706286787986755
+2022-07-23,The menu and staff and music were okay.,3,neutral,the menu and staff and music were okay,LABEL_2,0.9331713914871216
+2019-02-20,loved the staff and affordable waiting time and amazing menu,3,positive,loved the staff and affordable waiting time and amazing menu,LABEL_2,0.9830942749977112
+2019-06-10,quick music and outstanding waiting time,4,positive,quick music and outstanding waiting time,LABEL_2,0.5868189930915833
+2021-07-01,friendly menu and perfect waiting time and delicious food,3,positive,friendly menu and perfect waiting time and delicious food,LABEL_2,0.963053286075592
+2019-03-31,affordable pricing and affordable cleanliness and amazing food,5,positive,affordable pricing and affordable cleanliness and amazing food,LABEL_2,0.9378600716590881
+2022-06-27,The cleanliness and lighting and food were okay.,3,neutral,the cleanliness and lighting and food were okay,LABEL_2,0.919763445854187
+2020-02-05,loved the cleanliness and friendly menu and delicious music,4,positive,loved the cleanliness and friendly menu and delicious music,LABEL_2,0.9865087866783142
+2020-05-01,great staff and amazing menu,3,positive,great staff and amazing menu,LABEL_2,0.968212902545929
+2024-07-14,quick music,5,positive,quick music,LABEL_1,0.6805852651596069
+2021-10-07,delicious lighting and amazing food,4,positive,delicious lighting and amazing food,LABEL_2,0.97519850730896
+2020-05-22,great ambience and amazing staff and outstanding service,3,positive,great ambience and amazing staff and outstanding service,LABEL_2,0.9777392745018005
+2024-02-27,perfect cleanliness,5,positive,perfect cleanliness,LABEL_2,0.8090594410896301
+2021-08-31,friendly staff and quick ambience and outstanding music,5,positive,friendly staff and quick ambience and outstanding music,LABEL_2,0.9449699521064758
+2019-01-10,slow waiting time and terrible cleanliness,3,negative,slow waiting time and terrible cleanliness,LABEL_0,0.9005934000015259
+2019-07-03,terrible ambience and hated the service,3,negative,terrible ambience and hated the service,LABEL_0,0.9813243746757507
+2021-01-05,great menu,4,positive,great menu,LABEL_2,0.8864921927452087
+2021-09-14,great music and perfect food,4,positive,great music and perfect food,LABEL_2,0.9704167246818542
+2022-01-31,hated the music and rude staff and dirty food,1,negative,hated the music and rude staff and dirty food,LABEL_0,0.980175793170929
+2020-02-07,relaxing menu and relaxing waiting time and perfect staff,4,positive,relaxing menu and relaxing waiting time and perfect staff,LABEL_2,0.9450607895851135
+2023-05-07,amazing staff and delicious menu,5,positive,amazing staff and delicious menu,LABEL_2,0.9623606204986572
+2024-01-08,amazing music and friendly cleanliness and delicious waiting time,5,positive,amazing music and friendly cleanliness and delicious waiting time,LABEL_2,0.9746817350387573
+2021-03-26,amazing staff and outstanding music,5,positive,amazing staff and outstanding music,LABEL_2,0.9546844363212585
+2021-04-21,noisy service,2,negative,noisy service,LABEL_0,0.7885773181915283
+2019-11-01,terrible pricing and poor service and slow lighting,1,negative,terrible pricing and poor service and slow lighting,LABEL_0,0.9703969359397888
+2019-01-28,affordable lighting and affordable menu,4,positive,affordable lighting and affordable menu,LABEL_2,0.6153975129127502
+2024-04-22,delicious food and delicious service,3,positive,delicious food and delicious service,LABEL_2,0.9691462516784668
+2024-09-26,perfect staff and outstanding food and outstanding ambience,3,positive,perfect staff and outstanding food and outstanding ambience,LABEL_2,0.9557785987854004
+2024-09-27,outstanding music and quick staff and quick service,5,positive,outstanding music and quick staff and quick service,LABEL_2,0.9203914403915405
+2021-10-18,great waiting time and affordable menu,5,positive,great waiting time and affordable menu,LABEL_2,0.8790907263755798
+2021-01-22,bad pricing and hated the music and rude waiting time,2,negative,bad pricing and hated the music and rude waiting time,LABEL_0,0.9713063836097717
+2019-01-27,loved the ambience and quick music,5,positive,loved the ambience and quick music,LABEL_2,0.9780915379524231
+2022-11-05,long wait ambience and overpriced waiting time and dirty food,2,negative,long wait ambience and overpriced waiting time and dirty food,LABEL_0,0.9496790170669556
+2020-07-22,outstanding pricing and amazing food and outstanding ambience,4,positive,outstanding pricing and amazing food and outstanding ambience,LABEL_2,0.9639132022857666
+2024-04-01,quick music and relaxing cleanliness,3,positive,quick music and relaxing cleanliness,LABEL_2,0.8405313491821289
+2022-08-04,affordable menu and outstanding staff and relaxing waiting time,3,positive,affordable menu and outstanding staff and relaxing waiting time,LABEL_2,0.9206514954566956
+2023-08-20,The waiting time and cleanliness and ambience were okay.,3,neutral,the waiting time and cleanliness and ambience were okay,LABEL_2,0.8581571578979492
+2020-12-03,perfect music and quick lighting,4,positive,perfect music and quick lighting,LABEL_2,0.8751919269561768
+2022-08-20,The cleanliness and waiting time were okay.,3,neutral,the cleanliness and waiting time were okay,LABEL_2,0.8576107621192932
+2020-12-24,affordable menu and quick music,3,positive,affordable menu and quick music,LABEL_2,0.7181495428085327
+2020-11-20,bad menu and bad ambience,1,negative,bad menu and bad ambience,LABEL_0,0.9071586728096008
+2020-07-21,poor staff and hated the lighting,2,negative,poor staff and hated the lighting,LABEL_0,0.9584485292434692
+2023-04-01,affordable ambience and delicious cleanliness and friendly menu,4,positive,affordable ambience and delicious cleanliness and friendly menu,LABEL_2,0.9349880218505859
+2020-12-24,quick food and relaxing menu,5,positive,quick food and relaxing menu,LABEL_2,0.799935519695282
+2021-06-11,The music and food and menu were okay.,3,neutral,the music and food and menu were okay,LABEL_2,0.9314278960227966
+2024-12-22,great music and amazing cleanliness,5,positive,great music and amazing cleanliness,LABEL_2,0.9748425483703613
+2024-12-28,delicious cleanliness and perfect service and quick ambience,3,positive,delicious cleanliness and perfect service and quick ambience,LABEL_2,0.9615316390991211
+2020-11-04,loved the lighting and outstanding food and quick pricing,4,positive,loved the lighting and outstanding food and quick pricing,LABEL_2,0.9819056987762451
+2019-05-31,The pricing and service were okay.,3,neutral,the pricing and service were okay,LABEL_2,0.8916774392127991
+2024-11-01,quick ambience and perfect staff and friendly food,4,positive,quick ambience and perfect staff and friendly food,LABEL_2,0.9409210085868835
+2023-10-23,amazing waiting time and amazing staff and quick ambience,5,positive,amazing waiting time and amazing staff and quick ambience,LABEL_2,0.9632359147071838
+2020-04-29,noisy food and poor music,2,negative,noisy food and poor music,LABEL_0,0.9336803555488586
+2022-08-13,affordable staff and outstanding menu and perfect waiting time,5,positive,affordable staff and outstanding menu and perfect waiting time,LABEL_2,0.9472934007644653
+2022-02-28,quick cleanliness and outstanding staff,4,positive,quick cleanliness and outstanding staff,LABEL_2,0.893011212348938
+2021-05-10,affordable menu and delicious pricing and perfect lighting,4,positive,affordable menu and delicious pricing and perfect lighting,LABEL_2,0.9476487040519714
+2019-05-25,friendly ambience and delicious service and quick menu,4,positive,friendly ambience and delicious service and quick menu,LABEL_2,0.9566689133644104
+2022-09-12,hated the staff,2,negative,hated the staff,LABEL_0,0.9550341963768005
+2019-07-06,slow ambience and terrible food and rude lighting,3,negative,slow ambience and terrible food and rude lighting,LABEL_0,0.9493798017501831
+2021-01-16,hated the lighting and terrible cleanliness,3,negative,hated the lighting and terrible cleanliness,LABEL_0,0.9666764140129089
+2019-03-05,friendly menu and relaxing ambience and friendly food,3,positive,friendly menu and relaxing ambience and friendly food,LABEL_2,0.904910683631897
+2021-10-05,overpriced lighting and terrible pricing and slow ambience,2,negative,overpriced lighting and terrible pricing and slow ambience,LABEL_0,0.9290534853935242
+2020-08-08,hated the music and long wait lighting,2,negative,hated the music and long wait lighting,LABEL_0,0.9561682939529419
+2023-01-20,amazing service,3,positive,amazing service,LABEL_2,0.896405816078186
+2022-03-15,loved the lighting and outstanding menu,5,positive,loved the lighting and outstanding menu,LABEL_2,0.9800651669502258
+2024-04-22,amazing cleanliness and delicious music,5,positive,amazing cleanliness and delicious music,LABEL_2,0.9705364108085632
+2020-02-28,long wait cleanliness and dirty lighting and hated the food,3,negative,long wait cleanliness and dirty lighting and hated the food,LABEL_0,0.9616677761077881
+2021-02-24,perfect menu,5,positive,perfect menu,LABEL_2,0.7044551968574524
+2021-09-01,The pricing and ambience and food were okay.,3,neutral,the pricing and ambience and food were okay,LABEL_2,0.8942105770111084
+2020-07-23,friendly menu and loved the ambience and loved the staff,5,positive,friendly menu and loved the ambience and loved the staff,LABEL_2,0.9820796251296997
+2019-06-13,delicious cleanliness and delicious waiting time,4,positive,delicious cleanliness and delicious waiting time,LABEL_2,0.9497501254081726
+2024-11-28,great waiting time and amazing staff and affordable cleanliness,5,positive,great waiting time and amazing staff and affordable cleanliness,LABEL_2,0.9592160582542419
+2019-05-10,great ambience and delicious food,5,positive,great ambience and delicious food,LABEL_2,0.9816532731056213
+2020-06-09,amazing music,3,positive,amazing music,LABEL_2,0.9093993902206421
+2023-09-13,quick waiting time and quick menu,3,positive,quick waiting time and quick menu,LABEL_1,0.7451192140579224
+2021-02-11,great music and great pricing,3,positive,great music and great pricing,LABEL_2,0.9448304176330566
+2024-04-27,perfect service and delicious music and friendly lighting,3,positive,perfect service and delicious music and friendly lighting,LABEL_2,0.9696992039680481
+2022-05-03,friendly ambience and perfect staff and perfect waiting time,5,positive,friendly ambience and perfect staff and perfect waiting time,LABEL_2,0.9420972466468811
+2021-04-19,rude staff,3,negative,rude staff,LABEL_0,0.8335413932800293
+2021-10-14,hated the waiting time,2,negative,hated the waiting time,LABEL_0,0.9300307631492615
+2024-08-21,hated the staff and hated the music,2,negative,hated the staff and hated the music,LABEL_0,0.967100977897644
+2019-01-02,long wait staff and long wait music and slow menu,3,negative,long wait staff and long wait music and slow menu,LABEL_0,0.49433448910713196
+2023-04-27,friendly music,5,positive,friendly music,LABEL_2,0.6921420097351074
+2024-11-09,slow staff and noisy cleanliness and hated the waiting time,2,negative,slow staff and noisy cleanliness and hated the waiting time,LABEL_0,0.9367468357086182
+2019-08-17,perfect cleanliness and friendly waiting time,4,positive,perfect cleanliness and friendly waiting time,LABEL_2,0.914495050907135
+2022-06-15,relaxing service and friendly staff and loved the food,4,positive,relaxing service and friendly staff and loved the food,LABEL_2,0.9839606285095215
+2021-02-12,perfect music and outstanding lighting and great menu,4,positive,perfect music and outstanding lighting and great menu,LABEL_2,0.9571506381034851
+2019-04-22,relaxing ambience and delicious waiting time,5,positive,relaxing ambience and delicious waiting time,LABEL_2,0.9409549832344055
+2022-05-17,great pricing and relaxing cleanliness and delicious food,3,positive,great pricing and relaxing cleanliness and delicious food,LABEL_2,0.9659082293510437
+2019-11-20,relaxing lighting and affordable waiting time and relaxing cleanliness,5,positive,relaxing lighting and affordable waiting time and relaxing cleanliness,LABEL_2,0.8465935587882996
+2022-12-19,great menu and great ambience and quick pricing,3,positive,great menu and great ambience and quick pricing,LABEL_2,0.9700390696525574
+2019-03-04,poor cleanliness and rude lighting and overpriced menu,2,negative,poor cleanliness and rude lighting and overpriced menu,LABEL_0,0.9599114656448364
+2023-02-27,great service,4,positive,great service,LABEL_2,0.8771697878837585
+2022-03-28,poor waiting time and overpriced service and long wait ambience,1,negative,poor waiting time and overpriced service and long wait ambience,LABEL_0,0.9170804023742676
+2023-10-15,noisy menu and bad waiting time and overpriced cleanliness,1,negative,noisy menu and bad waiting time and overpriced cleanliness,LABEL_0,0.9298525452613831
+2022-04-13,loved the food and loved the lighting and delicious music,4,positive,loved the food and loved the lighting and delicious music,LABEL_2,0.9898674488067627
+2023-06-18,noisy food,2,negative,noisy food,LABEL_0,0.7030895948410034
+2022-07-06,perfect cleanliness and amazing service,3,positive,perfect cleanliness and amazing service,LABEL_2,0.9627012610435486
+2022-08-29,delicious service and quick staff and amazing food,5,positive,delicious service and quick staff and amazing food,LABEL_2,0.9784659743309021
+2021-03-15,bad cleanliness and hated the service,1,negative,bad cleanliness and hated the service,LABEL_0,0.9574389457702637
+2023-01-21,poor staff and rude music and terrible cleanliness,2,negative,poor staff and rude music and terrible cleanliness,LABEL_0,0.9641095399856567
+2020-01-31,rude menu,2,negative,rude menu,LABEL_0,0.7422696352005005
+2023-03-30,affordable menu and loved the lighting and great waiting time,3,positive,affordable menu and loved the lighting and great waiting time,LABEL_2,0.9761695861816406
+2019-05-26,dirty ambience and poor menu,2,negative,dirty ambience and poor menu,LABEL_0,0.9209387302398682
+2024-09-06,amazing ambience and delicious menu and friendly cleanliness,5,positive,amazing ambience and delicious menu and friendly cleanliness,LABEL_2,0.9736039042472839
+2021-05-11,amazing staff and amazing food,3,positive,amazing staff and amazing food,LABEL_2,0.9709811210632324
+2024-07-07,delicious waiting time,4,positive,delicious waiting time,LABEL_2,0.5121918320655823
+2021-09-28,hated the service and hated the menu,1,negative,hated the service and hated the menu,LABEL_0,0.970737099647522
+2024-11-09,loved the music and relaxing lighting,3,positive,loved the music and relaxing lighting,LABEL_2,0.978818416595459
+2021-07-07,relaxing music and quick lighting,4,positive,relaxing music and quick lighting,LABEL_2,0.8531522750854492
+2022-10-30,bad ambience,1,negative,bad ambience,LABEL_0,0.8146607875823975
+2020-08-02,loved the pricing and amazing lighting and relaxing food,3,positive,loved the pricing and amazing lighting and relaxing food,LABEL_2,0.9838488101959229
+2019-09-15,outstanding waiting time and affordable staff and delicious food,3,positive,outstanding waiting time and affordable staff and delicious food,LABEL_2,0.915372371673584
+2022-12-07,delicious menu and delicious waiting time,4,positive,delicious menu and delicious waiting time,LABEL_2,0.9548702836036682
+2024-01-03,The ambience and food and cleanliness were okay.,3,neutral,the ambience and food and cleanliness were okay,LABEL_2,0.9143572449684143
+2021-06-06,relaxing pricing and great menu and quick lighting,4,positive,relaxing pricing and great menu and quick lighting,LABEL_2,0.9587527513504028
+2019-02-17,slow cleanliness,2,negative,slow cleanliness,LABEL_2,0.4850309193134308
+2020-06-26,friendly staff and delicious food and affordable music,4,positive,friendly staff and delicious food and affordable music,LABEL_2,0.9546027779579163
+2024-11-30,affordable waiting time and quick menu,4,positive,affordable waiting time and quick menu,LABEL_1,0.5262429118156433
+2020-12-05,amazing food and affordable service,5,positive,amazing food and affordable service,LABEL_2,0.953620195388794
+2020-01-26,terrible waiting time,3,negative,terrible waiting time,LABEL_0,0.9585960507392883
+2022-02-19,amazing menu and outstanding cleanliness,3,positive,amazing menu and outstanding cleanliness,LABEL_2,0.9532226324081421
+2024-05-10,outstanding staff and friendly menu,3,positive,outstanding staff and friendly menu,LABEL_2,0.9166997671127319
+2020-06-29,outstanding ambience and affordable lighting,3,positive,outstanding ambience and affordable lighting,LABEL_2,0.90517657995224
+2019-05-21,terrible ambience and slow service,3,negative,terrible ambience and slow service,LABEL_0,0.9740954637527466
+2024-04-21,relaxing music and delicious menu,5,positive,relaxing music and delicious menu,LABEL_2,0.9661770462989807
+2020-02-07,perfect menu and affordable staff,5,positive,perfect menu and affordable staff,LABEL_2,0.9189400672912598
+2020-09-01,relaxing staff and friendly service,4,positive,relaxing staff and friendly service,LABEL_2,0.94119793176651
+2023-07-17,The service and lighting were okay.,3,neutral,the service and lighting were okay,LABEL_2,0.9060140252113342
+2024-06-14,The music and ambience were okay.,3,neutral,the music and ambience were okay,LABEL_2,0.9174861311912537
+2021-12-18,great ambience and quick menu and affordable pricing,5,positive,great ambience and quick menu and affordable pricing,LABEL_2,0.9581099152565002
+2021-02-16,friendly service and amazing pricing,3,positive,friendly service and amazing pricing,LABEL_2,0.9455412030220032
+2023-09-27,amazing service and quick staff,4,positive,amazing service and quick staff,LABEL_2,0.9480961561203003
+2021-09-02,The service and waiting time and pricing were okay.,3,neutral,the service and waiting time and pricing were okay,LABEL_2,0.8305906653404236
+2024-04-28,The lighting and waiting time were okay.,3,neutral,the lighting and waiting time were okay,LABEL_2,0.8702141642570496
+2022-11-06,friendly lighting and perfect staff and quick music,4,positive,friendly lighting and perfect staff and quick music,LABEL_2,0.917149007320404
+2020-06-27,delicious music and delicious pricing and outstanding waiting time,3,positive,delicious music and delicious pricing and outstanding waiting time,LABEL_2,0.9587026834487915
+2023-05-23,loved the music and amazing staff,5,positive,loved the music and amazing staff,LABEL_2,0.9862589836120605
+2020-03-22,amazing staff and friendly ambience,3,positive,amazing staff and friendly ambience,LABEL_2,0.9649015665054321
+2024-04-12,delicious ambience and delicious service,3,positive,delicious ambience and delicious service,LABEL_2,0.96321702003479
+2022-12-19,long wait service,2,negative,long wait service,LABEL_0,0.7319393754005432
+2023-06-18,amazing menu and quick pricing and amazing food,4,positive,amazing menu and quick pricing and amazing food,LABEL_2,0.9710304737091064
+2024-11-15,overpriced lighting and overpriced cleanliness and overpriced waiting time,2,negative,overpriced lighting and overpriced cleanliness and overpriced waiting time,LABEL_0,0.7808578014373779
+2022-09-08,slow staff and dirty lighting,1,negative,slow staff and dirty lighting,LABEL_0,0.8805314898490906
+2022-09-28,relaxing lighting and great service and perfect food,3,positive,relaxing lighting and great service and perfect food,LABEL_2,0.9778773188591003
+2022-01-19,friendly menu and affordable music,5,positive,friendly menu and affordable music,LABEL_2,0.8074088096618652
+2022-03-29,great music and quick menu and loved the food,5,positive,great music and quick menu and loved the food,LABEL_2,0.9836015105247498
+2021-02-13,slow ambience and poor cleanliness and hated the food,3,negative,slow ambience and poor cleanliness and hated the food,LABEL_0,0.9612828493118286
+2020-05-05,loved the staff and amazing cleanliness,4,positive,loved the staff and amazing cleanliness,LABEL_2,0.9835701584815979
+2020-07-22,long wait music and dirty cleanliness and terrible waiting time,3,negative,long wait music and dirty cleanliness and terrible waiting time,LABEL_0,0.9332490563392639
+2020-03-21,affordable music,4,positive,affordable music,LABEL_1,0.5804210305213928
+2019-12-19,loved the lighting,4,positive,loved the lighting,LABEL_2,0.9692773818969727
+2022-01-13,bad staff and slow waiting time and noisy music,1,negative,bad staff and slow waiting time and noisy music,LABEL_0,0.8596948385238647
+2019-12-27,The menu and service were okay.,3,neutral,the menu and service were okay,LABEL_2,0.9115627408027649
+2022-02-27,dirty staff and bad waiting time and long wait ambience,1,negative,dirty staff and bad waiting time and long wait ambience,LABEL_0,0.895610511302948
+2021-09-19,delicious pricing and delicious food,4,positive,delicious pricing and delicious food,LABEL_2,0.9545484185218811
+2024-02-14,slow waiting time,1,negative,slow waiting time,LABEL_0,0.6055394411087036
+2022-04-17,outstanding service and delicious music and quick menu,5,positive,outstanding service and delicious music and quick menu,LABEL_2,0.9448382258415222
+2023-03-06,friendly ambience,4,positive,friendly ambience,LABEL_2,0.7376238703727722
+2019-05-11,amazing food and loved the lighting,3,positive,amazing food and loved the lighting,LABEL_2,0.9801651239395142
+2022-03-24,friendly staff and delicious lighting,4,positive,friendly staff and delicious lighting,LABEL_2,0.9466809630393982
+2024-03-25,delicious staff and friendly music and loved the menu,3,positive,delicious staff and friendly music and loved the menu,LABEL_2,0.9853652119636536
+2020-06-19,delicious pricing and perfect food,3,positive,delicious pricing and perfect food,LABEL_2,0.9432626366615295
+2019-05-21,affordable ambience and amazing staff,4,positive,affordable ambience and amazing staff,LABEL_2,0.9622883200645447
+2020-12-01,perfect cleanliness and friendly pricing,3,positive,perfect cleanliness and friendly pricing,LABEL_2,0.9094070792198181
+2021-11-06,outstanding service and delicious music and amazing lighting,4,positive,outstanding service and delicious music and amazing lighting,LABEL_2,0.9620072245597839
+2021-03-14,great pricing and great food,4,positive,great pricing and great food,LABEL_2,0.9493558406829834
+2022-09-22,dirty lighting,1,negative,dirty lighting,LABEL_0,0.525985836982727
+2019-03-23,great cleanliness,3,positive,great cleanliness,LABEL_2,0.8784924149513245
+2021-11-02,delicious ambience and relaxing staff and quick service,4,positive,delicious ambience and relaxing staff and quick service,LABEL_2,0.9494976997375488
+2022-09-15,loved the music and outstanding pricing,5,positive,loved the music and outstanding pricing,LABEL_2,0.9785283207893372
+2023-02-23,The ambience were okay.,3,neutral,the ambience were okay,LABEL_2,0.8138096332550049
+2024-09-18,outstanding cleanliness and affordable food and friendly waiting time,3,positive,outstanding cleanliness and affordable food and friendly waiting time,LABEL_2,0.920764684677124
+2019-01-24,outstanding cleanliness,3,positive,outstanding cleanliness,LABEL_2,0.8334971070289612
+2020-12-09,outstanding lighting,5,positive,outstanding lighting,LABEL_2,0.7264134287834167
+2021-02-12,outstanding ambience and outstanding waiting time,4,positive,outstanding ambience and outstanding waiting time,LABEL_2,0.7771633267402649
+2019-12-14,affordable food and loved the pricing and quick lighting,3,positive,affordable food and loved the pricing and quick lighting,LABEL_2,0.9661553502082825
+2019-07-17,quick menu and quick pricing and amazing cleanliness,3,positive,quick menu and quick pricing and amazing cleanliness,LABEL_2,0.9435431361198425
+2020-08-27,overpriced ambience,2,negative,overpriced ambience,LABEL_0,0.8838532567024231
+2024-04-12,terrible ambience and noisy staff and terrible lighting,2,negative,terrible ambience and noisy staff and terrible lighting,LABEL_0,0.9665111303329468
+2019-08-16,bad lighting and poor service,3,negative,bad lighting and poor service,LABEL_0,0.9193788170814514
+2019-07-05,loved the food,5,positive,loved the food,LABEL_2,0.9712005853652954
+2024-05-08,quick ambience and affordable menu and loved the cleanliness,3,positive,quick ambience and affordable menu and loved the cleanliness,LABEL_2,0.9631916880607605
+2024-06-10,great food and outstanding staff,4,positive,great food and outstanding staff,LABEL_2,0.9595689177513123
+2022-01-24,outstanding service,4,positive,outstanding service,LABEL_2,0.7920222878456116
+2020-01-18,delicious pricing and affordable lighting,5,positive,delicious pricing and affordable lighting,LABEL_2,0.7705761790275574
+2020-03-31,friendly waiting time and relaxing lighting and relaxing pricing,4,positive,friendly waiting time and relaxing lighting and relaxing pricing,LABEL_2,0.7968314290046692
+2020-10-28,bad staff and rude ambience,1,negative,bad staff and rude ambience,LABEL_0,0.9394820332527161
+2024-09-27,slow food and bad staff and long wait waiting time,1,negative,slow food and bad staff and long wait waiting time,LABEL_0,0.9249166250228882
+2023-06-18,amazing staff and perfect menu,5,positive,amazing staff and perfect menu,LABEL_2,0.961534857749939
+2021-09-04,outstanding service and amazing food,4,positive,outstanding service and amazing food,LABEL_2,0.9546064734458923
+2024-08-06,great cleanliness and quick lighting,3,positive,great cleanliness and quick lighting,LABEL_2,0.9404877424240112
+2019-07-19,long wait staff and bad waiting time and hated the service,2,negative,long wait staff and bad waiting time and hated the service,LABEL_0,0.9742081165313721
+2021-04-07,The service and menu were okay.,3,neutral,the service and menu were okay,LABEL_2,0.9074222445487976
+2023-01-12,amazing pricing and amazing lighting and amazing service,5,positive,amazing pricing and amazing lighting and amazing service,LABEL_2,0.9677271246910095
+2024-07-17,friendly menu and delicious service,3,positive,friendly menu and delicious service,LABEL_2,0.9423249959945679
+2021-11-06,outstanding staff and delicious cleanliness and delicious lighting,4,positive,outstanding staff and delicious cleanliness and delicious lighting,LABEL_2,0.9609395265579224
+2024-03-04,rude pricing and overpriced lighting,3,negative,rude pricing and overpriced lighting,LABEL_0,0.9229230284690857
+2022-04-29,The food and lighting were okay.,3,neutral,the food and lighting were okay,LABEL_2,0.9135369658470154
+2019-06-19,outstanding pricing and relaxing menu,5,positive,outstanding pricing and relaxing menu,LABEL_2,0.9084560871124268
+2019-11-06,poor pricing,1,negative,poor pricing,LABEL_0,0.5710247159004211
+2022-06-22,delicious staff and friendly lighting and friendly service,5,positive,delicious staff and friendly lighting and friendly service,LABEL_2,0.9321582913398743
+2020-12-09,noisy cleanliness,2,negative,noisy cleanliness,LABEL_1,0.6150009632110596
+2022-05-07,hated the pricing,2,negative,hated the pricing,LABEL_0,0.8960797786712646
+2021-06-07,terrible pricing and dirty ambience and bad lighting,3,negative,terrible pricing and dirty ambience and bad lighting,LABEL_0,0.9607412219047546
+2024-08-22,outstanding pricing and outstanding ambience and perfect waiting time,3,positive,outstanding pricing and outstanding ambience and perfect waiting time,LABEL_2,0.9271826148033142
+2022-01-01,loved the cleanliness,3,positive,loved the cleanliness,LABEL_2,0.9645643830299377
+2019-05-25,terrible staff and terrible food,2,negative,terrible staff and terrible food,LABEL_0,0.9680305123329163
+2023-04-18,The pricing and cleanliness were okay.,3,neutral,the pricing and cleanliness were okay,LABEL_2,0.8652207255363464
+2019-11-27,great menu and quick staff,4,positive,great menu and quick staff,LABEL_2,0.9387720823287964
+2019-09-24,quick ambience and delicious service,3,positive,quick ambience and delicious service,LABEL_2,0.9328467845916748
+2021-08-16,delicious lighting,5,positive,delicious lighting,LABEL_1,0.6636159420013428
+2023-09-24,slow pricing,2,negative,slow pricing,LABEL_1,0.6143858432769775
+2020-07-31,outstanding music and friendly cleanliness,5,positive,outstanding music and friendly cleanliness,LABEL_2,0.9390118718147278
+2020-02-10,amazing menu and delicious service and friendly pricing,4,positive,amazing menu and delicious service and friendly pricing,LABEL_2,0.9688776731491089
+2024-08-29,amazing staff and great ambience and great cleanliness,5,positive,amazing staff and great ambience and great cleanliness,LABEL_2,0.9765556454658508
+2019-07-26,delicious menu and amazing lighting,3,positive,delicious menu and amazing lighting,LABEL_2,0.9626325368881226
+2022-07-30,rude food and bad ambience,2,negative,rude food and bad ambience,LABEL_0,0.9560165405273438
+2022-03-22,perfect food and relaxing waiting time,4,positive,perfect food and relaxing waiting time,LABEL_2,0.9184110760688782
+2023-12-07,relaxing service,5,positive,relaxing service,LABEL_2,0.8592182397842407
+2023-06-26,The service and ambience were okay.,3,neutral,the service and ambience were okay,LABEL_2,0.9119436144828796
+2023-03-28,perfect ambience and quick waiting time and perfect food,4,positive,perfect ambience and quick waiting time and perfect food,LABEL_2,0.9244165420532227
+2022-09-11,noisy waiting time and noisy staff and long wait service,3,negative,noisy waiting time and noisy staff and long wait service,LABEL_0,0.8789712190628052
+2023-05-12,delicious waiting time and outstanding service,3,positive,delicious waiting time and outstanding service,LABEL_2,0.8597683906555176
+2024-12-22,perfect ambience and quick staff and quick food,3,positive,perfect ambience and quick staff and quick food,LABEL_2,0.9252662062644958
+2023-08-27,perfect music and relaxing lighting and perfect ambience,3,positive,perfect music and relaxing lighting and perfect ambience,LABEL_2,0.9561042189598083
+2023-07-24,affordable music and great service,4,positive,affordable music and great service,LABEL_2,0.9522438049316406
+2023-05-03,quick waiting time and quick staff,5,positive,quick waiting time and quick staff,LABEL_1,0.6450573801994324
+2023-01-29,affordable service and outstanding waiting time,3,positive,affordable service and outstanding waiting time,LABEL_2,0.7108219265937805
+2023-03-25,The music and lighting were okay.,3,neutral,the music and lighting were okay,LABEL_2,0.9137418270111084
+2023-08-03,overpriced music and terrible menu,3,negative,overpriced music and terrible menu,LABEL_0,0.9523751735687256
+2024-07-22,terrible lighting and bad food and terrible service,1,negative,terrible lighting and bad food and terrible service,LABEL_0,0.9689910411834717
+2024-08-15,delicious menu and friendly waiting time and quick staff,5,positive,delicious menu and friendly waiting time and quick staff,LABEL_2,0.9361780881881714
+2021-05-21,hated the staff and rude music and noisy food,3,negative,hated the staff and rude music and noisy food,LABEL_0,0.9780046343803406
+2020-10-02,The service were okay.,3,neutral,the service were okay,LABEL_2,0.8579717874526978
+2019-03-03,quick food and delicious lighting and delicious pricing,3,positive,quick food and delicious lighting and delicious pricing,LABEL_2,0.95806485414505
+2019-02-28,long wait food and terrible lighting and terrible menu,3,negative,long wait food and terrible lighting and terrible menu,LABEL_0,0.9510988593101501
+2021-09-01,long wait waiting time,2,negative,long wait waiting time,LABEL_0,0.6667454838752747
+2022-05-15,overpriced service,2,negative,overpriced service,LABEL_0,0.9204849004745483
+2022-04-18,poor lighting and slow cleanliness and long wait food,1,negative,poor lighting and slow cleanliness and long wait food,LABEL_0,0.8879616260528564
+2023-01-31,perfect ambience and affordable cleanliness and amazing food,3,positive,perfect ambience and affordable cleanliness and amazing food,LABEL_2,0.9680570960044861
+2022-03-31,terrible lighting and hated the staff,3,negative,terrible lighting and hated the staff,LABEL_0,0.9774277806282043
+2019-04-03,great lighting and outstanding food,5,positive,great lighting and outstanding food,LABEL_2,0.9484677314758301
+2021-11-30,perfect menu and delicious service,3,positive,perfect menu and delicious service,LABEL_2,0.9499862790107727
+2019-09-20,hated the food and long wait cleanliness and overpriced music,3,negative,hated the food and long wait cleanliness and overpriced music,LABEL_0,0.9681988954544067
+2023-04-23,relaxing food and affordable lighting and amazing cleanliness,5,positive,relaxing food and affordable lighting and amazing cleanliness,LABEL_2,0.968207597732544
+2023-10-22,friendly lighting and delicious music,3,positive,friendly lighting and delicious music,LABEL_2,0.9442976713180542
+2024-06-19,delicious service and great lighting and great waiting time,3,positive,delicious service and great lighting and great waiting time,LABEL_2,0.9509171843528748
+2020-06-14,The music and staff were okay.,3,neutral,the music and staff were okay,LABEL_2,0.9253670573234558
+2021-11-21,affordable service and loved the food and friendly ambience,3,positive,affordable service and loved the food and friendly ambience,LABEL_2,0.9785100221633911
+2022-01-04,relaxing cleanliness and amazing service and friendly food,5,positive,relaxing cleanliness and amazing service and friendly food,LABEL_2,0.9778836965560913
+2022-02-20,perfect pricing and amazing music and amazing food,4,positive,perfect pricing and amazing music and amazing food,LABEL_2,0.9697097539901733
+2024-10-07,hated the ambience and terrible menu and dirty lighting,2,negative,hated the ambience and terrible menu and dirty lighting,LABEL_0,0.9765318632125854
+2023-10-27,The music and cleanliness and ambience were okay.,3,neutral,the music and cleanliness and ambience were okay,LABEL_2,0.9377923607826233
+2021-01-01,amazing food and perfect lighting,4,positive,amazing food and perfect lighting,LABEL_2,0.9635059237480164
+2023-09-02,loved the cleanliness and delicious service,3,positive,loved the cleanliness and delicious service,LABEL_2,0.9821615219116211
+2022-03-11,perfect cleanliness and perfect service and delicious staff,3,positive,perfect cleanliness and perfect service and delicious staff,LABEL_2,0.9689599275588989
+2023-12-07,affordable menu and friendly pricing and friendly ambience,3,positive,affordable menu and friendly pricing and friendly ambience,LABEL_2,0.851935625076294
+2020-06-15,noisy lighting and long wait staff and terrible food,2,negative,noisy lighting and long wait staff and terrible food,LABEL_0,0.9577119946479797
+2024-12-22,relaxing cleanliness and great service and delicious music,3,positive,relaxing cleanliness and great service and delicious music,LABEL_2,0.979317307472229
+2019-06-01,The staff and menu and waiting time were okay.,3,neutral,the staff and menu and waiting time were okay,LABEL_2,0.9135417342185974
+2024-07-31,outstanding service and great menu and amazing lighting,4,positive,outstanding service and great menu and amazing lighting,LABEL_2,0.9627487659454346
+2020-01-09,great ambience,5,positive,great ambience,LABEL_2,0.9098790287971497
